@@ -43,7 +43,7 @@ namespace Diskret1 {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TextBox^ textBoxN;
 
-	private: System::Windows::Forms::TextBox^ textBoxM;
+
 
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Button^ button4;
@@ -69,14 +69,13 @@ namespace Diskret1 {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBoxN = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxM = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(128, 15);
+			this->button1->Location = System::Drawing::Point(12, 83);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(78, 44);
 			this->button1->TabIndex = 0;
@@ -86,7 +85,7 @@ namespace Diskret1 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(128, 65);
+			this->button2->Location = System::Drawing::Point(128, 83);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(78, 44);
 			this->button2->TabIndex = 1;
@@ -121,7 +120,7 @@ namespace Diskret1 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(9, 30);
+			this->label1->Location = System::Drawing::Point(12, 30);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(40, 15);
 			this->label1->TabIndex = 4;
@@ -129,23 +128,16 @@ namespace Diskret1 {
 			// 
 			// textBoxN
 			// 
-			this->textBoxN->Location = System::Drawing::Point(56, 27);
+			this->textBoxN->Location = System::Drawing::Point(96, 30);
 			this->textBoxN->Name = L"textBoxN";
 			this->textBoxN->Size = System::Drawing::Size(66, 21);
 			this->textBoxN->TabIndex = 5;
 			this->textBoxN->TextChanged += gcnew System::EventHandler(this, &FormLaba2::textBox1_TextChanged);
 			// 
-			// textBoxM
-			// 
-			this->textBoxM->Location = System::Drawing::Point(56, 77);
-			this->textBoxM->Name = L"textBoxM";
-			this->textBoxM->Size = System::Drawing::Size(66, 21);
-			this->textBoxM->TabIndex = 7;
-			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(9, 80);
+			this->label2->Location = System::Drawing::Point(46, 30);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(44, 15);
 			this->label2->TabIndex = 6;
@@ -169,7 +161,6 @@ namespace Diskret1 {
 			this->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->ClientSize = System::Drawing::Size(246, 400);
 			this->Controls->Add(this->button4);
-			this->Controls->Add(this->textBoxM);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBoxN);
 			this->Controls->Add(this->label1);
@@ -195,17 +186,17 @@ namespace Diskret1 {
 
 		ifstream fileP("fileP.txt"); ifstream fileQ("fileQ.txt");
 		String^ sN = textBoxN->Text;
-		String^ sM = textBoxN->Text;
+	//	String^ sM = textBoxN->Text;
 		if (sN == "") {
 			MessageBox::Show("Нет данных", "Ошибка");
 			return;
 		}
-		if (sM == "") {
+		/*if (sM == "") {
 			MessageBox::Show("Нет данных", "Ошибка");
 			return;
-		}
+		}*/
 		ofstream filePROV("filePROV.txt");
-		int m = Convert::ToInt16(sM);
+		//int m = Convert::ToInt16(sM);
 		int n = Convert::ToInt16(sN);
 		 char** q;  q = new  char* [n];
 		 for ( int i = 0; i < n; i++) {
@@ -469,16 +460,16 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	ofstream fileQ("fileQ.txt");
 	srand(time(NULL));
 	String^ sN = textBoxN->Text;
-	String^ sM = textBoxM->Text;
+	//String^ sM = textBoxM->Text;
 	if (sN == "") {
 		MessageBox::Show("Нет данных", "Ошибка");
 		return;
 	}
-	if (sM == "") {
+	/*if (sM == "") {
 		MessageBox::Show("Нет данных", "Ошибка");
 		return;
-	}
-	int m = Convert::ToInt16(sM);
+	}*/
+	//int m = Convert::ToInt16(sM);
 	int n = Convert::ToInt16(sN);
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
@@ -486,8 +477,8 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 		}fileP << endl;
 		
 	}
-	for (int i = 0; i < m ; i++) {
-		for (int j = 0; j < m; j++) {
+	for (int i = 0; i < n ; i++) {
+		for (int j = 0; j < n; j++) {
 			fileQ << rand() % 2;
 		}fileQ << endl;
 	}
