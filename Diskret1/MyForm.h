@@ -145,9 +145,10 @@ namespace Diskret1 {
 			// 
 			// genA
 			// 
-			this->genA->Location = System::Drawing::Point(193, 24);
+			this->genA->Location = System::Drawing::Point(225, 32);
+			this->genA->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->genA->Name = L"genA";
-			this->genA->Size = System::Drawing::Size(44, 23);
+			this->genA->Size = System::Drawing::Size(51, 32);
 			this->genA->TabIndex = 0;
 			this->genA->Text = L"gen A";
 			this->genA->UseVisualStyleBackColor = true;
@@ -155,9 +156,10 @@ namespace Diskret1 {
 			// 
 			// genB
 			// 
-			this->genB->Location = System::Drawing::Point(193, 61);
+			this->genB->Location = System::Drawing::Point(225, 79);
+			this->genB->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->genB->Name = L"genB";
-			this->genB->Size = System::Drawing::Size(44, 23);
+			this->genB->Size = System::Drawing::Size(51, 32);
 			this->genB->TabIndex = 1;
 			this->genB->Text = L"gen B";
 			this->genB->UseVisualStyleBackColor = true;
@@ -166,58 +168,65 @@ namespace Diskret1 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(257, 25);
+			this->label1->Location = System::Drawing::Point(300, 33);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(0, 13);
+			this->label1->Size = System::Drawing::Size(0, 17);
 			this->label1->TabIndex = 4;
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(257, 71);
+			this->label2->Location = System::Drawing::Point(300, 94);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(0, 13);
+			this->label2->Size = System::Drawing::Size(0, 17);
 			this->label2->TabIndex = 5;
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(12, 29);
+			this->label3->Location = System::Drawing::Point(14, 36);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(24, 13);
+			this->label3->Size = System::Drawing::Size(28, 17);
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"N:=";
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(43, 26);
+			this->textBox1->Location = System::Drawing::Point(50, 34);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(32, 20);
+			this->textBox1->Size = System::Drawing::Size(37, 24);
 			this->textBox1->TabIndex = 7;
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(12, 69);
+			this->label4->Location = System::Drawing::Point(14, 91);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(25, 13);
+			this->label4->Size = System::Drawing::Size(29, 17);
 			this->label4->TabIndex = 8;
 			this->label4->Text = L"M:=";
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(43, 64);
+			this->textBox2->Location = System::Drawing::Point(50, 84);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(32, 20);
+			this->textBox2->Size = System::Drawing::Size(37, 24);
 			this->textBox2->TabIndex = 9;
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox2_TextChanged);
 			// 
 			// buttonAperB
 			// 
-			this->buttonAperB->Location = System::Drawing::Point(15, 113);
+			this->buttonAperB->Location = System::Drawing::Point(16, 147);
+			this->buttonAperB->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->buttonAperB->Name = L"buttonAperB";
-			this->buttonAperB->Size = System::Drawing::Size(60, 23);
+			this->buttonAperB->Size = System::Drawing::Size(70, 32);
 			this->buttonAperB->TabIndex = 10;
 			this->buttonAperB->Text = L"A^B";
 			this->buttonAperB->UseVisualStyleBackColor = true;
@@ -226,16 +235,18 @@ namespace Diskret1 {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(95, 123);
+			this->label5->Location = System::Drawing::Point(111, 162);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(0, 13);
+			this->label5->Size = System::Drawing::Size(0, 17);
 			this->label5->TabIndex = 11;
 			// 
 			// buttonAobB
 			// 
-			this->buttonAobB->Location = System::Drawing::Point(15, 151);
+			this->buttonAobB->Location = System::Drawing::Point(16, 197);
+			this->buttonAobB->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->buttonAobB->Name = L"buttonAobB";
-			this->buttonAobB->Size = System::Drawing::Size(60, 23);
+			this->buttonAobB->Size = System::Drawing::Size(70, 32);
 			this->buttonAobB->TabIndex = 12;
 			this->buttonAobB->Text = L"A U B ";
 			this->buttonAobB->UseVisualStyleBackColor = true;
@@ -244,31 +255,35 @@ namespace Diskret1 {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(95, 156);
+			this->label6->Location = System::Drawing::Point(111, 204);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(0, 13);
+			this->label6->Size = System::Drawing::Size(0, 17);
 			this->label6->TabIndex = 13;
 			// 
 			// textBoxMaxB
 			// 
-			this->textBoxMaxB->Location = System::Drawing::Point(154, 63);
+			this->textBoxMaxB->Location = System::Drawing::Point(180, 83);
+			this->textBoxMaxB->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxMaxB->Name = L"textBoxMaxB";
-			this->textBoxMaxB->Size = System::Drawing::Size(33, 20);
+			this->textBoxMaxB->Size = System::Drawing::Size(38, 24);
 			this->textBoxMaxB->TabIndex = 14;
 			// 
 			// textBoxMaxA
 			// 
-			this->textBoxMaxA->Location = System::Drawing::Point(154, 24);
+			this->textBoxMaxA->Location = System::Drawing::Point(180, 32);
+			this->textBoxMaxA->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxMaxA->Name = L"textBoxMaxA";
-			this->textBoxMaxA->Size = System::Drawing::Size(33, 20);
+			this->textBoxMaxA->Size = System::Drawing::Size(38, 24);
 			this->textBoxMaxA->TabIndex = 15;
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(81, 28);
+			this->label7->Location = System::Drawing::Point(93, 36);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(72, 13);
+			this->label7->Size = System::Drawing::Size(81, 17);
 			this->label7->TabIndex = 16;
 			this->label7->Text = L"Max num A+1";
 			this->label7->Click += gcnew System::EventHandler(this, &MyForm::label7_Click);
@@ -276,27 +291,30 @@ namespace Diskret1 {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(81, 69);
+			this->label8->Location = System::Drawing::Point(93, 91);
+			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(72, 13);
+			this->label8->Size = System::Drawing::Size(80, 17);
 			this->label8->TabIndex = 17;
 			this->label8->Text = L"Max num B+1";
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(12, 8);
+			this->label9->Location = System::Drawing::Point(14, 10);
+			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(265, 13);
+			this->label9->Size = System::Drawing::Size(320, 17);
 			this->label9->TabIndex = 18;
 			this->label9->Text = L"if Max A<N or Max B<M then N=Max A and M =Max B ";
 			this->label9->Click += gcnew System::EventHandler(this, &MyForm::label9_Click);
 			// 
 			// buttonArB
 			// 
-			this->buttonArB->Location = System::Drawing::Point(15, 190);
+			this->buttonArB->Location = System::Drawing::Point(16, 248);
+			this->buttonArB->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->buttonArB->Name = L"buttonArB";
-			this->buttonArB->Size = System::Drawing::Size(60, 23);
+			this->buttonArB->Size = System::Drawing::Size(70, 32);
 			this->buttonArB->TabIndex = 19;
 			this->buttonArB->Text = L"A\\B";
 			this->buttonArB->UseVisualStyleBackColor = true;
@@ -304,9 +322,10 @@ namespace Diskret1 {
 			// 
 			// buttonBrA
 			// 
-			this->buttonBrA->Location = System::Drawing::Point(15, 228);
+			this->buttonBrA->Location = System::Drawing::Point(16, 298);
+			this->buttonBrA->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->buttonBrA->Name = L"buttonBrA";
-			this->buttonBrA->Size = System::Drawing::Size(60, 23);
+			this->buttonBrA->Size = System::Drawing::Size(70, 32);
 			this->buttonBrA->TabIndex = 20;
 			this->buttonBrA->Text = L"B\\A";
 			this->buttonBrA->UseVisualStyleBackColor = true;
@@ -315,24 +334,27 @@ namespace Diskret1 {
 			// labelArB
 			// 
 			this->labelArB->AutoSize = true;
-			this->labelArB->Location = System::Drawing::Point(95, 200);
+			this->labelArB->Location = System::Drawing::Point(111, 262);
+			this->labelArB->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelArB->Name = L"labelArB";
-			this->labelArB->Size = System::Drawing::Size(0, 13);
+			this->labelArB->Size = System::Drawing::Size(0, 17);
 			this->labelArB->TabIndex = 21;
 			// 
 			// labelBrA
 			// 
 			this->labelBrA->AutoSize = true;
-			this->labelBrA->Location = System::Drawing::Point(95, 238);
+			this->labelBrA->Location = System::Drawing::Point(111, 312);
+			this->labelBrA->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelBrA->Name = L"labelBrA";
-			this->labelBrA->Size = System::Drawing::Size(0, 13);
+			this->labelBrA->Size = System::Drawing::Size(0, 17);
 			this->labelBrA->TabIndex = 22;
 			// 
 			// buttonAsrB
 			// 
-			this->buttonAsrB->Location = System::Drawing::Point(15, 267);
+			this->buttonAsrB->Location = System::Drawing::Point(16, 349);
+			this->buttonAsrB->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->buttonAsrB->Name = L"buttonAsrB";
-			this->buttonAsrB->Size = System::Drawing::Size(60, 23);
+			this->buttonAsrB->Size = System::Drawing::Size(70, 32);
 			this->buttonAsrB->TabIndex = 23;
 			this->buttonAsrB->Text = L"AΔB";
 			this->buttonAsrB->UseVisualStyleBackColor = true;
@@ -341,25 +363,28 @@ namespace Diskret1 {
 			// labelAsrB
 			// 
 			this->labelAsrB->AutoSize = true;
-			this->labelAsrB->Location = System::Drawing::Point(95, 277);
+			this->labelAsrB->Location = System::Drawing::Point(111, 363);
+			this->labelAsrB->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelAsrB->Name = L"labelAsrB";
-			this->labelAsrB->Size = System::Drawing::Size(0, 13);
+			this->labelAsrB->Size = System::Drawing::Size(0, 17);
 			this->labelAsrB->TabIndex = 25;
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->Location = System::Drawing::Point(260, 296);
+			this->pictureBox1->Location = System::Drawing::Point(303, 389);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(213, 133);
+			this->pictureBox1->Size = System::Drawing::Size(247, 172);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 26;
 			this->pictureBox1->TabStop = false;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(52, 305);
+			this->button1->Location = System::Drawing::Point(61, 400);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(86, 32);
 			this->button1->TabIndex = 27;
 			this->button1->Text = L"AxB";
 			this->button1->UseVisualStyleBackColor = true;
@@ -368,39 +393,44 @@ namespace Diskret1 {
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(12, 310);
+			this->label10->Location = System::Drawing::Point(14, 406);
+			this->label10->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(34, 13);
+			this->label10->Size = System::Drawing::Size(39, 17);
 			this->label10->TabIndex = 28;
 			this->label10->Text = L"Lab3:";
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(12, 344);
+			this->label11->Location = System::Drawing::Point(14, 451);
+			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(34, 13);
+			this->label11->Size = System::Drawing::Size(39, 17);
 			this->label11->TabIndex = 29;
 			this->label11->Text = L"Lab4:";
 			// 
 			// listBox1
 			// 
 			this->listBox1->FormattingEnabled = true;
+			this->listBox1->ItemHeight = 17;
 			this->listBox1->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
 				L"1.\"<\"", L"2.\"=\"", L"3.\"a mod b =0\"", L"4. \"a mod 2=0 или b mod 2=0\"",
 					L"5.\"a mod 2=0 и b mod 2 =0\""
 			});
-			this->listBox1->Location = System::Drawing::Point(52, 344);
+			this->listBox1->Location = System::Drawing::Point(61, 451);
+			this->listBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(162, 69);
+			this->listBox1->Size = System::Drawing::Size(188, 89);
 			this->listBox1->TabIndex = 30;
 			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::listBox1_SelectedIndexChanged);
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(52, 423);
+			this->button2->Location = System::Drawing::Point(61, 553);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(148, 32);
+			this->button2->Size = System::Drawing::Size(173, 43);
 			this->button2->TabIndex = 31;
 			this->button2->Text = L"P<= AxB";
 			this->button2->UseVisualStyleBackColor = true;
@@ -409,18 +439,20 @@ namespace Diskret1 {
 			// pictureBox2
 			// 
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(288, 435);
+			this->pictureBox2->Location = System::Drawing::Point(336, 570);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(185, 30);
+			this->pictureBox2->Size = System::Drawing::Size(216, 40);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox2->TabIndex = 32;
 			this->pictureBox2->TabStop = false;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 17);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(480, 467);
+			this->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->ClientSize = System::Drawing::Size(560, 611);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->listBox1);
@@ -451,7 +483,12 @@ namespace Diskret1 {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->genB);
 			this->Controls->Add(this->genA);
+			this->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->MaximizeBox = false;
 			this->Name = L"MyForm";
 			this->Text = L"Laba 1,2,3,4";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
