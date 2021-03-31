@@ -1,5 +1,6 @@
 #include "MyForm1.h"
 #include <Windows.h>
+
 using namespace Diskret1;
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	Application::EnableVisualStyles();

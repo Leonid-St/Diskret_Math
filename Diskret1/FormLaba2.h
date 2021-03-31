@@ -182,6 +182,12 @@ namespace Diskret1 {
 #pragma endregion
 	private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   /*void trans(double A[N][N], double B[N][N]) {
+			   int i, j;
+			   for (i = 0; i < N; i++)
+				   for (j = 0; j < N; j++)
+					   B[i][j] = A[j][i];
+		   }*/
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		ifstream fileP("fileP.txt"); ifstream fileQ("fileQ.txt");
@@ -260,7 +266,13 @@ namespace Diskret1 {
 				for (int j = 0; j < n; j++) {
 					int tmp = (static_cast<int>(p[i][j])) + (static_cast<int>(q[i][j]));
 					if (tmp >= 1) {
-						ans << tmp;
+						if (tmp == 1) {
+							ans << tmp;
+						}
+						else {
+							tmp = 1;
+							ans << tmp;
+						}
 					}
 					else {
 						ans << '0';
@@ -345,22 +357,35 @@ namespace Diskret1 {
 		if (listBox1->SelectedIndex == 6) {
 			ofstream ans("laba5bin7.txt");
 			char** p1;  p1 = new  char* [n];
+
 			for (int i = 0; i < n; i++) {
 				*(p1 + i) = new char[n];
 			}
-			int t;
+
+			for (int i = 0; i < n; i++) {
+				for (int j = 0; j < n; j++) {
+					p1[i][j] = p[i][j];
+				}
+			}
+			char t;
 			for (int i = 0; i < n; ++i)
 			{
 				for (int j = i; j < n; ++j)
 				{
-					t = static_cast<int>(p1[i][j]);
-					p1[i][j] = p1[j][i];
-					p1[j][i] = t;
+				//	t = static_cast<int>(p1[i][j]);
+				t = p1[i][j];
+				//ans << t;
+				p1[i][j] = p1[j][i];
+				p1[j][i] = t;
+
 				}
 			}
+
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j < n; j++) {
-					ans << p1[i][j];
+
+					ans << Convert::ToChar(p1[i][j]);
+
 				}ans << endl;
 			}
 			ans.close(); delete[]p1;
@@ -373,6 +398,10 @@ namespace Diskret1 {
 			for (int i = 0; i < n; i++) {
 				*(q1 + i) = new char[n];
 			}
+
+
+
+
 			for (int i = 0; i < n; ++i)
 			{
 				for (int j = 0; j < n; ++j)
@@ -380,7 +409,7 @@ namespace Diskret1 {
 					q1[i][j] = q[i][j];
 				}
 			}
-			int t;
+			char t;
 			for (int i = 0; i < n; ++i)
 			{
 				for (int j = i; j < n; ++j)
@@ -392,14 +421,39 @@ namespace Diskret1 {
 			}
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j < n; j++) {
-					ans << q1[i][j];
+					ans << Convert::ToChar(q1[i][j]);
 				}ans << endl;
 			}
 			ans.close(); delete[]q1;
 			Process::Start("notepad.exe", "laba5bin8.txt");
 
 		}
-		
+		//
+		/*for (int i = 0; i < M; i++)
+		{
+
+			for (int j = 0; j < M; j++)
+			{
+				C[i][j] = 0;
+				for (int k = 0; k < M; k++)
+				{
+					C[i][j] += A[i][k] * B[k][j];
+				}
+				if (C[i][j] > 1)
+				{
+					C[i][j] == 1;
+					textBox5->Text += System::Convert::ToString(C[i][j]) + System::Convert::ToString(" ");
+				}
+				else
+				{
+					textBox5->Text += System::Convert::ToString(C[i][j]) + System::Convert::ToString(" ");
+				}
+			}
+			textBox5->Text += Environment::NewLine;
+		}
+		break;
+  }*/
+		//
 		if (listBox1->SelectedIndex == 8) {
 			ofstream ans("laba5bin9.txt");
 			int** C;  C = new  int* [n];
@@ -409,9 +463,20 @@ namespace Diskret1 {
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j < n; j++) {
 					C[i][j] = 0;
-					for (int k = 0; k < n; k++)
+					for (int k = 0; k < n; k++) {
 						C[i][j] += static_cast<int>(p[i][k]) * static_cast<int>(q[k][j]);
-					ans << C[i][j];
+					}
+					if ( C[i][j] > 1 ) {
+						
+						C[i][j] = 1;
+						
+						//MessageBox::Show(Convert::ToString(C[i][j])+ " " + Convert::ToString(i) + " " +  Convert::ToString(j));
+						ans << C[i][j];
+					}
+					else {
+						ans << C[i][j];
+					}
+					
 				}
 				ans << endl;
 			}
@@ -441,6 +506,7 @@ namespace Diskret1 {
 			ans.close();
 			Process::Start("notepad.exe", "laba5bin10.txt");
 		}
+		delete[]p; delete[]q;
 	}
 
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {

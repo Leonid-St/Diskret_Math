@@ -1,6 +1,7 @@
 #pragma once
 #include "MyForm.h"
 #include "FormLaba2.h"
+#include "LogicCalc.h"
 
 namespace Diskret1 {
 
@@ -40,6 +41,8 @@ namespace Diskret1 {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Label^ label3;
 	protected:
 
 	private:
@@ -60,11 +63,13 @@ namespace Diskret1 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(122, 24);
+			this->button1->Location = System::Drawing::Point(137, 28);
 			this->button1->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(87, 32);
@@ -76,15 +81,17 @@ namespace Diskret1 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 			this->label1->Location = System::Drawing::Point(14, 32);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(90, 18);
+			this->label1->Size = System::Drawing::Size(117, 22);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Ырс,1,2,3,4:=";
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(122, 86);
+			this->button2->Location = System::Drawing::Point(137, 89);
 			this->button2->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(87, 32);
@@ -96,11 +103,35 @@ namespace Diskret1 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 			this->label2->Location = System::Drawing::Point(14, 93);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(61, 18);
+			this->label2->Size = System::Drawing::Size(77, 22);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Ырср:= 5";
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(137, 147);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(87, 34);
+			this->button3->TabIndex = 4;
+			this->button3->Text = L"Open";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm1::button3_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->label3->Location = System::Drawing::Point(16, 155);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(97, 22);
+			this->label3->TabIndex = 5;
+			this->label3->Text = L"Logic calc:=";
+			this->label3->Click += gcnew System::EventHandler(this, &MyForm1::label3_Click);
 			// 
 			// MyForm1
 			// 
@@ -108,6 +139,8 @@ namespace Diskret1 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->ClientSize = System::Drawing::Size(267, 361);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->button3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->label1);
@@ -136,5 +169,11 @@ namespace Diskret1 {
 		FormLaba2^ laba2 = gcnew FormLaba2();
 		laba2->Show();
 	}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	LogicCalc^ laba = gcnew LogicCalc();
+	laba->Show();
+}
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
