@@ -170,7 +170,7 @@ void LogicCalculator::printAndExpression()
 
 void LogicCalculator::PrintExpression(bool flag) {
 	fstream f("file.txt");
-		f.end;
+		//f.end;
 	int situations = 1;
 	situations = pow(2, num);
 	int flag1 = 0;
